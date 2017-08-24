@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocuSignEnvelopeInformation xmlns="http://www.docusign.net/API/3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<EnvelopeStatus>
+		<RecipientStatuses>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>barpe061+signer1@gmail.com</Email>
+				<UserName>Signer One</UserName>
+				<RoutingOrder>1</RoutingOrder>
+				<Sent>2017-08-15T22:55:30.743</Sent>
+				<Delivered>2017-08-15T22:56:43.09</Delivered>
+				<Signed>2017-08-15T22:56:50.12</Signed>
+				<DeclineReason xsi:nil="true"/>
+				<Status>Completed</Status>
+				<RecipientIPAddress>4.16.146.123</RecipientIPAddress>
+				<RecipientAuthenticationStatus>
+					<AccessCodeResult>
+						<Status>Passed</Status>
+						<EventTimestamp>2017-08-15T21:56:37.307Z</EventTimestamp>
+					</AccessCodeResult>
+				</RecipientAuthenticationStatus>
+				<CustomFields/>
+				<TabStatuses>
+					<TabStatus>
+						<TabType>SignHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>208</XPosition>
+						<YPosition>208</YPosition>
+						<TabLabel>Sign Here</TabLabel>
+						<TabName>SignHere</TabName>
+						<TabValue/>
+						<DocumentID>1</DocumentID>
+						<PageNumber>2</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>DateSigned</TabType>
+						<Status>Signed</Status>
+						<XPosition>20</XPosition>
+						<YPosition>20</YPosition>
+						<TabLabel>Date Signed</TabLabel>
+						<TabName>DateSigned</TabName>
+						<TabValue>August 15, 2017 | 2:56 PM PDT</TabValue>
+						<DocumentID>1</DocumentID>
+						<PageNumber>2</PageNumber>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IkRhdGVTaWduZWQiPjx2YWx1ZT5BdWd1c3QgMTUsIDIwMTcgfCAyOjU2IFBNIFBEVDwvdmFsdWU+PC9maWVsZD48L2ZpZWxkcz48L3hmZGY+PC9Gb3JtRGF0YT4=</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="DateSigned">
+								<value>August 15, 2017 | 2:56 PM PDT</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>d9aa8179-93d9-428a-97ac-954fa5378bbd</RecipientId>
+			</RecipientStatus>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>barpe061+signer2@gmail.com</Email>
+				<UserName>Signer Two</UserName>
+				<RoutingOrder>2</RoutingOrder>
+				<Sent>2017-08-15T22:56:50.87</Sent>
+				<Delivered>2017-08-15T22:57:13.09</Delivered>
+				<Signed>2017-08-15T22:59:10.5</Signed>
+				<DeclineReason xsi:nil="true"/>
+				<Status>Completed</Status>
+				<RecipientIPAddress>4.16.146.123</RecipientIPAddress>
+				<CustomFields/>
+				<TabStatuses>
+					<TabStatus>
+						<TabType>SignHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>208</XPosition>
+						<YPosition>208</YPosition>
+						<TabLabel>Sign Here</TabLabel>
+						<TabName>SignHere</TabName>
+						<TabValue/>
+						<DocumentID>1</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>DateSigned</TabType>
+						<Status>Signed</Status>
+						<XPosition>20</XPosition>
+						<YPosition>20</YPosition>
+						<TabLabel>Date Signed</TabLabel>
+						<TabName>DateSigned</TabName>
+						<TabValue>August 15, 2017 | 2:58 PM PDT</TabValue>
+						<DocumentID>1</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IkRhdGVTaWduZWQiPjx2YWx1ZT5BdWd1c3QgMTUsIDIwMTcgfCAyOjU4IFBNIFBEVDwvdmFsdWU+PC9maWVsZD48L2ZpZWxkcz48L3hmZGY+PC9Gb3JtRGF0YT4=</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="DateSigned">
+								<value>August 15, 2017 | 2:58 PM PDT</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>817fac77-3aea-419b-81b2-c2f05eeb8557</RecipientId>
+			</RecipientStatus>
+		</RecipientStatuses>
+		<TimeGenerated>2017-08-15T22:59:32.177274</TimeGenerated>
+		<EnvelopeID>b8b915ae-8bb1-4996-ab77-06047b05c8d4</EnvelopeID>
+		<Subject>Your docs are ready for your signature</Subject>
+		<UserName>Pedro Barroso</UserName>
+		<Email>barpe061@gmail.com</Email>
+		<Status>Completed</Status>
+		<Created>2017-08-15T22:40:04.94</Created>
+		<Sent>2017-08-15T22:56:50.887</Sent>
+		<Delivered>2017-08-15T22:57:13.247</Delivered>
+		<Signed>2017-08-15T22:59:10.547</Signed>
+		<Completed>2017-08-15T22:59:10.547</Completed>
+		<ACStatus>Authoritative Copy</ACStatus>
+		<ACStatusDate>2017-08-15T22:59:11.563</ACStatusDate>
+		<ACHolder>Pedro Barroso</ACHolder>
+		<ACHolderEmail>barpe061@gmail.com</ACHolderEmail>
+		<ACHolderLocation>DocuSign</ACHolderLocation>
+		<SigningLocation>Online</SigningLocation>
+		<SenderIPAddress>4.16.146.123 </SenderIPAddress>
+		<EnvelopePDFHash/>
+		<CustomFields/>
+		<AutoNavigation>true</AutoNavigation>
+		<EnvelopeIdStamping>true</EnvelopeIdStamping>
+		<AuthoritativeCopy>false</AuthoritativeCopy>
+		<DocumentStatuses>
+			<DocumentStatus>
+				<ID>1</ID>
+				<Name>test1</Name>
+				<TemplateName/>
+				<Sequence>1</Sequence>
+			</DocumentStatus>
+		</DocumentStatuses>
+	</EnvelopeStatus>
+</DocuSignEnvelopeInformation>
