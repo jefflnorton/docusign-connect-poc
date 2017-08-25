@@ -22,6 +22,8 @@ public class EnvelopeStatus {
     private Date created;
     private Date sent;
     private Date delivered;
+    private Date signed;
+    private Date completed;
     private String signingLocation;
     private String senderIpAddress;
     private RecipientStatuses recipientStatuses;
@@ -104,6 +106,24 @@ public class EnvelopeStatus {
 
     public void setDelivered(Date delivered) {
         this.delivered = delivered;
+    }
+
+    @XmlElement(name = "Signed")
+    public Date getSigned() {
+        return signed;
+    }
+
+    public void setSigned(Date signed) {
+        this.signed = signed;
+    }
+
+    @XmlElement(name = "Completed")
+    public Date getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(Date completed) {
+        this.completed = completed;
     }
 
     @XmlElement(name = "SigningLocation")
