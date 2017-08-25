@@ -1,5 +1,9 @@
 package com.bcbsm.docusignconnectpoc.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 /**
@@ -19,9 +23,11 @@ public class RecipientStatus {
     private String declineReason;
     private String status;
     private String recipientIpAddress;
+    private RecipientAuthenticationStatus recipientAuthenticationStatus;
     private String accountStatus;
     private String recipientId;
 
+    @XmlElement(name = "Type")
     public String getType() {
         return type;
     }
@@ -30,6 +36,7 @@ public class RecipientStatus {
         this.type = type;
     }
 
+    @XmlElement(name = "Email")
     public String getEmail() {
         return email;
     }
@@ -38,6 +45,7 @@ public class RecipientStatus {
         this.email = email;
     }
 
+    @XmlElement(name = "UserName")
     public String getUserName() {
         return userName;
     }
@@ -46,6 +54,7 @@ public class RecipientStatus {
         this.userName = userName;
     }
 
+    @XmlElement(name = "RoutingOrder")
     public int getRoutingOrder() {
         return routingOrder;
     }
@@ -54,6 +63,7 @@ public class RecipientStatus {
         this.routingOrder = routingOrder;
     }
 
+    @XmlElement(name = "Sent")
     public Date getSent() {
         return sent;
     }
@@ -62,6 +72,7 @@ public class RecipientStatus {
         this.sent = sent;
     }
 
+    @XmlElement(name = "Delivered")
     public Date getDelivered() {
         return delivered;
     }
@@ -70,6 +81,7 @@ public class RecipientStatus {
         this.delivered = delivered;
     }
 
+    @XmlElement(name = "DeclineReason")
     public String getDeclineReason() {
         return declineReason;
     }
@@ -78,6 +90,7 @@ public class RecipientStatus {
         this.declineReason = declineReason;
     }
 
+    @XmlElement(name = "Status")
     public String getStatus() {
         return status;
     }
@@ -86,6 +99,7 @@ public class RecipientStatus {
         this.status = status;
     }
 
+    @XmlElement(name = "RecipientIPAddress")
     public String getRecipientIpAddress() {
         return recipientIpAddress;
     }
@@ -94,6 +108,16 @@ public class RecipientStatus {
         this.recipientIpAddress = recipientIpAddress;
     }
 
+    @XmlElement(name = "RecipientAuthenticationStatus")
+    public RecipientAuthenticationStatus getRecipientAuthenticationStatus() {
+        return recipientAuthenticationStatus;
+    }
+
+    public void setRecipientAuthenticationStatus(RecipientAuthenticationStatus recipientAuthenticationStatus) {
+        this.recipientAuthenticationStatus = recipientAuthenticationStatus;
+    }
+
+    @XmlElement(name = "AccountStatus")
     public String getAccountStatus() {
         return accountStatus;
     }
@@ -102,6 +126,7 @@ public class RecipientStatus {
         this.accountStatus = accountStatus;
     }
 
+    @XmlElement(name = "RecipientId")
     public String getRecipientId() {
         return recipientId;
     }

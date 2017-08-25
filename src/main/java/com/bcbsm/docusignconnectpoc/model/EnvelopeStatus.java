@@ -1,6 +1,7 @@
 package com.bcbsm.docusignconnectpoc.model;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class EnvelopeStatus {
     private Date delivered;
     private String signingLocation;
     private String senderIpAddress;
-    private List<RecipientStatus> recipientStatuses;
+    private RecipientStatuses recipientStatuses;
 
     public Date getTimeGenerated() {
         return timeGenerated;
@@ -69,6 +70,7 @@ public class EnvelopeStatus {
         this.email = email;
     }
 
+    @XmlElement(name = "Status")
     public String getStatus() {
         return status;
     }
@@ -77,6 +79,7 @@ public class EnvelopeStatus {
         this.status = status;
     }
 
+    @XmlElement(name = "Created")
     public Date getCreated() {
         return created;
     }
@@ -85,6 +88,7 @@ public class EnvelopeStatus {
         this.created = created;
     }
 
+    @XmlElement(name = "Sent")
     public Date getSent() {
         return sent;
     }
@@ -93,6 +97,7 @@ public class EnvelopeStatus {
         this.sent = sent;
     }
 
+    @XmlElement(name = "Delivered")
     public Date getDelivered() {
         return delivered;
     }
@@ -101,6 +106,7 @@ public class EnvelopeStatus {
         this.delivered = delivered;
     }
 
+    @XmlElement(name = "SigningLocation")
     public String getSigningLocation() {
         return signingLocation;
     }
@@ -109,6 +115,7 @@ public class EnvelopeStatus {
         this.signingLocation = signingLocation;
     }
 
+    @XmlElement(name = "SenderIPAddress")
     public String getSenderIpAddress() {
         return senderIpAddress;
     }
@@ -117,11 +124,12 @@ public class EnvelopeStatus {
         this.senderIpAddress = senderIpAddress;
     }
 
-    public List<RecipientStatus> getRecipientStatuses() {
+    @XmlElement(name = "RecipientStatuses")
+    public RecipientStatuses getRecipientStatuses() {
         return recipientStatuses;
     }
 
-    public void setRecipientStatuses(List<RecipientStatus> recipientStatuses) {
+    public void setRecipientStatuses(RecipientStatuses recipientStatuses) {
         this.recipientStatuses = recipientStatuses;
     }
 }
