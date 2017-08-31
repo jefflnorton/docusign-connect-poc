@@ -43,13 +43,12 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
-		<!--
-		<dependency>
-			<artifactId>javax.servlet</artifactId>
-			<groupId>javax.servlet-api</groupId>
-			<scope>provided</scope>
-		</dependency>
-		-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
