@@ -10,6 +10,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.stream.Collectors;
+
 /**
  * Created with IntelliJ IDEA.
  * User: e111128
@@ -36,5 +42,29 @@ public class ConnectRestController {
         connectMessageService.addConnectMessage(docuSignEnvelopeInformation);
 
         return docuSignEnvelopeInformation;
+    }
+
+    @RequestMapping(value = "/api/test",
+            method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public void testConnectMessage(HttpServletRequest request, HttpServletResponse response) {
+        log.info("Received API Test Message.");
+
+        Enumeration<String> headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String headerName = headerNames.nextElement();
+            log.info("Header: " + headerName + " = " + request.getHeader(headerName));
+        }
+
+        String requestBody = null;
+
+        try {
+            requestBody = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        log.info("requestBody: " + requestBody);
+
     }
 }
