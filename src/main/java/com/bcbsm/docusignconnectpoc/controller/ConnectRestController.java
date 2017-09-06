@@ -32,8 +32,8 @@ public class ConnectRestController {
 
     @RequestMapping(value = "/api/connect",
             method = RequestMethod.POST,
-            consumes = MediaType.APPLICATION_XML_VALUE,
-            produces = MediaType.APPLICATION_XML_VALUE)
+            consumes = MediaType.TEXT_XML_VALUE,
+            produces = MediaType.TEXT_XML_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     public DocuSignEnvelopeInformation processConnectMessage(@RequestBody DocuSignEnvelopeInformation docuSignEnvelopeInformation) {

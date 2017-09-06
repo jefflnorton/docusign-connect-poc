@@ -26,6 +26,7 @@ public class RecipientStatus {
     private RecipientAuthenticationStatus recipientAuthenticationStatus;
     private String accountStatus;
     private String recipientId;
+    private TabStatuses tabStatuses;
 
     @XmlElement(name = "Type")
     public String getType() {
@@ -133,5 +134,14 @@ public class RecipientStatus {
 
     public void setRecipientId(String recipientId) {
         this.recipientId = recipientId;
+    }
+
+    @XmlElement(name = "TabStatuses")
+    public TabStatuses getTabStatuses() {
+        return tabStatuses;
+    }
+
+    public void setTabStatuses(TabStatuses tabStatuses) {
+        this.tabStatuses = tabStatuses;
     }
 }

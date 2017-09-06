@@ -26,6 +26,18 @@ public class EnvelopeStatus {
     private Date completed;
     private String signingLocation;
     private String senderIpAddress;
+    private String acStatus;
+    private Date acStatusDate;
+    private String acHolder;
+    private String acHolderEmail;
+    private String acHolderLocation;
+    private boolean autoNavigation;
+    private boolean envelopeIdStamping;
+    private boolean authoritativeCopy;
+    private DocumentStatuses documentStatuses;
+    private String timeZone;
+    private int timeZoneOffset;
+
     private RecipientStatuses recipientStatuses;
 
     public Date getTimeGenerated() {
@@ -151,5 +163,104 @@ public class EnvelopeStatus {
 
     public void setRecipientStatuses(RecipientStatuses recipientStatuses) {
         this.recipientStatuses = recipientStatuses;
+    }
+
+    @XmlElement(name = "ACStatus")
+    public String getAcStatus() {
+        return acStatus;
+    }
+
+    public void setAcStatus(String acStatus) {
+        this.acStatus = acStatus;
+    }
+
+    @XmlElement(name = "ACStatusDate")
+    public Date getAcStatusDate() {
+        return acStatusDate;
+    }
+
+    public void setAcStatusDate(Date acStatusDate) {
+        this.acStatusDate = acStatusDate;
+    }
+
+    @XmlElement(name = "ACHolder")
+    public String getAcHolder() {
+        return acHolder;
+    }
+
+    public void setAcHolder(String acHolder) {
+        this.acHolder = acHolder;
+    }
+
+    @XmlElement(name = "ACHolderEmail")
+    public String getAcHolderEmail() {
+        return acHolderEmail;
+    }
+
+    public void setAcHolderEmail(String acHolderEmail) {
+        this.acHolderEmail = acHolderEmail;
+    }
+
+    @XmlElement(name = "ACHolderLocation")
+    public String getAcHolderLocation() {
+        return acHolderLocation;
+    }
+
+    public void setAcHolderLocation(String acHolderLocation) {
+        this.acHolderLocation = acHolderLocation;
+    }
+
+    @XmlElement(name = "AutoNavigation")
+    public boolean isAutoNavigation() {
+        return autoNavigation;
+    }
+
+    public void setAutoNavigation(boolean autoNavigation) {
+        this.autoNavigation = autoNavigation;
+    }
+
+    @XmlElement(name = "EnvelopeIdStamping")
+    public boolean isEnvelopeIdStamping() {
+        return envelopeIdStamping;
+    }
+
+    public void setEnvelopeIdStamping(boolean envelopeIdStamping) {
+        this.envelopeIdStamping = envelopeIdStamping;
+    }
+
+    @XmlElement(name = "AuthoritativeCopy")
+    public boolean isAuthoritativeCopy() {
+        return authoritativeCopy;
+    }
+
+    public void setAuthoritativeCopy(boolean authoritativeCopy) {
+        this.authoritativeCopy = authoritativeCopy;
+    }
+
+    @XmlElement(name = "DocumentStatuses")
+    public DocumentStatuses getDocumentStatuses() {
+        return documentStatuses;
+    }
+
+    public void setDocumentStatuses(DocumentStatuses documentStatuses) {
+        this.documentStatuses = documentStatuses;
+    }
+
+    @XmlElement(name = "TimeZone")
+    public String getTimeZone() {
+        return timeZone;
+    }
+
+    public void setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+    }
+
+    @XmlElement(name = "TimeZoneOffset")
+    public int getTimeZoneOffset() {
+        return timeZoneOffset;
+    }
+
+    public void setTimeZoneOffset(int timeZoneOffset) {
+        this.timeZoneOffset = timeZoneOffset;
     }
 }
