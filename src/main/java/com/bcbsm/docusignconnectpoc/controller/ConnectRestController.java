@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -31,9 +32,7 @@ public class ConnectRestController {
     private ConnectMessageService connectMessageService;
 
     @RequestMapping(value = "/api/connect",
-            method = RequestMethod.POST,
-            consumes = MediaType.TEXT_XML_VALUE,
-            produces = MediaType.TEXT_XML_VALUE)
+            method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     public DocuSignEnvelopeInformation processConnectMessage(@RequestBody DocuSignEnvelopeInformation docuSignEnvelopeInformation) {
@@ -42,6 +41,19 @@ public class ConnectRestController {
         connectMessageService.addConnectMessage(docuSignEnvelopeInformation);
 
         return docuSignEnvelopeInformation;
+    }
+
+    @RequestMapping(value = "/api/connect",
+            method = RequestMethod.GET)
+    @ResponseBody
+    public List<DocuSignEnvelopeInformation> getPendingConnectMessages() {
+        log.info("Processing pending DocuSign Connect messages.");
+
+        List<DocuSignEnvelopeInformation> envelopeInfoList = connectMessageService.getPendingConnectMessages();
+
+        log.info("Completed processing of pending DocuSign Connect messages.");
+
+        return envelopeInfoList;
     }
 
     @RequestMapping(value = "/api/test",
